@@ -1,10 +1,11 @@
+import NavBar from './components/NavBar'
 import './App.scss'
 
 function App() {
 
   return (
     <>
-     <h1>NASA APOD</h1>
+     <NavBar/>
     </>
   )
 }
