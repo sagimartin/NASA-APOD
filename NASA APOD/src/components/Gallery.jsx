@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function Gallery() {
     const [apodList, setApodList] = useState([]);
-
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
-
 
     // Fetch APOD images from the past 9 days
     useEffect(() => {
@@ -37,12 +35,23 @@ export default function Gallery() {
         <div className="gallery-container">
             <div className="gallery">
                 {apodList.map((apodData, index) => (
-                    <div className="image-container" key={index}>
-                        <img
-                            alt={apodData.title}
-                            className="gallery-image"
-                            src={apodData.url}
-                        />
+                    <div className="media-container" key={index}>
+                        {apodData.url.includes("youtube.com") ? (
+                            // YouTube link? --> video
+                            <iframe
+                                title={apodData.title}
+                                src={apodData.url.replace("watch?v=", "embed/")}
+                                frameBorder="0"
+                                allowFullScreen
+                            ></iframe>
+                        ) : (
+                            // IMG
+                            <img
+                                alt={apodData.title}
+                                className="gallery-image"
+                                src={apodData.url}
+                            />
+                        )}
                     </div>
                 ))}
             </div>
