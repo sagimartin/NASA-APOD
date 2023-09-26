@@ -61,6 +61,7 @@ $yellow: #f2d39a;
 
   .main-section {
     display: flex;
+    justify-content: center;
     margin-top: 3rem;
     color: white;
     gap: 3rem;
@@ -81,6 +82,40 @@ $yellow: #f2d39a;
       text-align: justify;
       line-height: 1.5rem;
     }
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+
+      img {
+        margin: 0 auto;
+      }
+
+      iframe {
+        height: 30vh;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      img {
+        max-width: 50%;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      .explanation {
+        max-width: 50%;
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 2em;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+      }
+    }
   }
 
   .date-picker {
@@ -89,27 +124,10 @@ $yellow: #f2d39a;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
     font-family: $title-font;
     font-size: 0.7rem;
     color: $yellow;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .main-section {
-      flex-direction: column;
-      img {
-        margin: 0 auto;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .main-section {
-      img {
-        max-width: 80vw;
-      }
-    }
   }
 }
 
