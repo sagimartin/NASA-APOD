@@ -49,3 +49,67 @@ $yellow: #f2d39a;
     }
   }
 }
+
+// PICTURE OF THE DAY
+.POD-container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .main-section {
+    display: flex;
+    margin-top: 3rem;
+    color: white;
+    gap: 3rem;
+
+    img {
+      border-radius: 35px;
+      max-height: 80vh;
+      max-width: 80vw;
+    }
+
+    h1 {
+      font-family: $title-font;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-family: $paragraph-font;
+      text-align: justify;
+      line-height: 1.5rem;
+    }
+  }
+
+  .date-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    font-family: $title-font;
+    font-size: 0.7rem;
+    color: $yellow;
+  }
+}
+
+// RESPONSITIVY
+@media screen and (max-width: 1024px) {
+  .main-section {
+    flex-direction: column;
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-section {
+    img {
+      max-width: 80vw;
+    }
+  }
+}
