@@ -19,7 +19,13 @@ $yellow: #f2d39a;
   padding: 2rem;
 }
 
-//DIVIDERS
+// NAVBAR
+.navBar {
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+// DIVIDERS
 .divider {
   width: 100%;
   color: $yellow;
@@ -27,6 +33,7 @@ $yellow: #f2d39a;
   font-size: 3rem;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .divider::before,
