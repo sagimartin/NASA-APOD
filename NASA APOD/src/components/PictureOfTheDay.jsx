@@ -33,7 +33,18 @@ export default function PictureOfTheDay() {
     return (
         <div className="POD-container">
             <section className="main-section">
-                <img src={apodData.url} alt={apodData.title} />
+                {apodData.url.includes("youtube.com") ? (
+                    // YouTube link? --> video
+                    <iframe
+                        title={apodData.title}
+                        src={apodData.url.replace("watch?v=", "embed/")}
+                        frameBorder="0"
+                        allowFullScreen
+                    ></iframe>
+                ) : (
+                    // IMG
+                    <img src={apodData.url} alt={apodData.title} />
+                )}
                 <div className="explanation">
                     <h1>{apodData.title}</h1>
                     <p>{apodData.explanation}</p>
@@ -49,5 +60,5 @@ export default function PictureOfTheDay() {
                 />
             </div>
         </div>
-    )
+    );
 }
