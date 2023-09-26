@@ -33,6 +33,7 @@ export default function Gallery() {
 
     return (
         <div className="gallery-container">
+            <div className="divider">GALLERY</div>
             <div className="gallery">
                 {apodList.map((apodData, index) => (
                     <div className="media-container" key={index}>
