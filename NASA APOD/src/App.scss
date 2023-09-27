@@ -23,6 +23,9 @@ $yellow: #f2d39a;
 .navBar {
   margin: 0 auto;
   max-width: 80vw;
+  @media screen and (max-width: 440px) {
+    margin-bottom: -3rem;
+  }
 }
 
 // DIVIDERS
@@ -35,6 +38,10 @@ $yellow: #f2d39a;
   align-items: center;
   text-align: center;
   cursor: default;
+
+  @media screen and (max-width: 440px) {
+    font-size: 1.5rem;
+  }
 }
 
 .divider::before,
@@ -84,6 +91,17 @@ $yellow: #f2d39a;
       }
     }
 
+    @media screen and (max-width: 440px) {
+      .explanation {
+        max-height: 40vh;
+        overflow: scroll;
+
+        h1 {
+          font-size: 1rem;
+        }
+      }
+    }
+
     @media screen and (max-width: 1024px) {
       flex-direction: column;
 
@@ -128,7 +146,12 @@ $yellow: #f2d39a;
     margin-top: 5rem;
     font-family: $title-font;
     font-size: 1rem;
+    text-align: center;
     color: $yellow;
+
+    @media screen and (max-width: 440px) {
+      font-size: 0.7rem;
+    }
 
     input {
       border-radius: 50px;
@@ -138,6 +161,10 @@ $yellow: #f2d39a;
       padding: 0.3rem;
       border: 5px solid $yellow;
       cursor: pointer;
+
+      @media screen and (max-width: 440px) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -191,6 +218,10 @@ $yellow: #f2d39a;
         display: flex;
         align-items: center;
         cursor: pointer;
+
+        @media screen and (max-width: 440px) {
+          font-size: 1rem;
+        }
       }
 
       h3::before,
