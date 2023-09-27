@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
+import Modal from "./Modal";
 
 export default function Gallery() {
     const [apodList, setApodList] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedImage, setSelectedImage] = useState({
+        url: "",
+        title: "",
+        explanation: "",
+    });
+
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
     // Fetch APOD images from the past 9 days
@@ -31,6 +39,15 @@ export default function Gallery() {
         fetchApodList();
     }, []);
 
+    const openModal = (url, title, explanation) => {
+        setSelectedImage({ url, title, explanation });
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
     return (
         <div className="gallery-container">
             <div className="divider">GALLERY</div>
@@ -45,18 +62,25 @@ export default function Gallery() {
                                 frameBorder="0"
                                 allowFullScreen
                             ></iframe>
-                            ) : (
-                                // IMG
-                                <img
+                        ) : (
+                            // IMG
+                            <img
                                 alt={apodData.title}
                                 className="gallery-image"
                                 src={apodData.url}
-                                />
-                                )}
-                                <h3>{apodData.title}</h3>
+                            />
+                        )}
+                        <h3 onClick={() => openModal(apodData.url, apodData.title, apodData.explanation)}
+                        >{apodData.title}</h3>
                     </div>
                 ))}
             </div>
+            {showModal && (
+                <Modal
+                    apodData={selectedImage}
+                    onClose={closeModal}
+                />
+            )}
         </div>
     );
 }
