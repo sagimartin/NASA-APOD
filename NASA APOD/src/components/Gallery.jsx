@@ -45,14 +45,15 @@ export default function Gallery() {
                                 frameBorder="0"
                                 allowFullScreen
                             ></iframe>
-                        ) : (
-                            // IMG
-                            <img
+                            ) : (
+                                // IMG
+                                <img
                                 alt={apodData.title}
                                 className="gallery-image"
                                 src={apodData.url}
-                            />
-                        )}
+                                />
+                                )}
+                                <h3>{apodData.title}</h3>
                     </div>
                 ))}
             </div>
