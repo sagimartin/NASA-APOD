@@ -1,0 +1,61 @@
+@import "../App.scss";
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+
+  .modal-content {
+    max-width: 85vw;
+    max-height: 95vh;
+    background-color: white;
+    padding: 2rem;
+    gap: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img,
+    iframe {
+      max-height: 70rem;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    .modal-explanation {
+      margin: 0 2rem;
+      max-width: 60rem;
+      text-align: justify;
+      overflow: scroll;
+      cursor: default;
+
+      h2 {
+        margin-bottom: 1rem;
+        font-family: $title-font;
+      }
+
+      p {
+        font-family: $paragraph-font;
+      }
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+}
