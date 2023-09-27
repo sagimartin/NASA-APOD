@@ -34,6 +34,7 @@ $yellow: #f2d39a;
   display: flex;
   align-items: center;
   text-align: center;
+  cursor: default;
 }
 
 .divider::before,
@@ -52,6 +53,7 @@ $yellow: #f2d39a;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: default;
 
   .main-section {
     display: flex;
@@ -122,6 +124,10 @@ $yellow: #f2d39a;
     font-family: $title-font;
     font-size: 0.7rem;
     color: $yellow;
+
+    input {
+      cursor: pointer;
+    }
   }
 }
 
