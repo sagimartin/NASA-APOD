@@ -13,24 +13,27 @@
   z-index: 9999;
 
   .modal-content {
-    max-width: 98vw;
-    max-height: 98vh;
+    max-width: 90vw;
+    max-height: 90vh;
     background-color: white;
     padding: 2rem;
     gap: 1rem;
     border-radius: 10px;
-    text-align: center;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow: scroll;
+
+    @media screen and (max-width: 440px) {
+      padding: 1rem;
+    }
 
     img,
     iframe {
       max-height: 50rem;
       max-width: 100%;
       border-radius: 10px;
+      padding-top: 1rem;
     }
 
     iframe {
@@ -38,19 +41,19 @@
       width: 100%;
     }
 
-    h2 {
-      color: white;
-      background-color: black;
-      margin: 0 auto;
-      font-family: $paragraph-font;
-      text-transform: uppercase;
-      width: fit-content;
-      padding: 0.2rem 1rem;
+    .title {
+      h2 {
+        color: white;
+        background-color: black;
+        font-family: $paragraph-font;
+        text-transform: uppercase;
+        text-align: left;
+        width: fit-content;
+        padding: 0.2rem 1rem;
 
-      @media screen and (max-width: 440px) {
-        font-size: 1.2rem;
-        text-align: center;
-        padding: 0.2rem 0.5rem;
+        @media screen and (max-width: 440px) {
+          font-size: 1.2rem;
+        }
       }
     }
 
