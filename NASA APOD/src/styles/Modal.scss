@@ -29,9 +29,13 @@
     img,
     iframe {
       max-height: 50rem;
-      width: auto;
       max-width: 95%;
       border-radius: 10px;
+    }
+
+    iframe {
+      height: 45vh;
+      width: 100%;
     }
 
     .modal-explanation {
