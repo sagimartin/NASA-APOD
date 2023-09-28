@@ -1,7 +1,7 @@
 @import "../App.scss";
 
 .POD-container {
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
     img {
       border-radius: 10px;
       max-height: 80vh;
-      max-width: 80vw;
+      max-width: 90vw;
     }
 
     h1 {
@@ -37,13 +37,11 @@
       font-size: 1.5rem;
       text-transform: uppercase;
       width: fit-content;
-      padding: 0 1rem;
-      border: 3px solid white;
+      padding: 0 0.5rem;
 
       @media screen and (max-width: 440px) {
-        font-size: 1rem;
-        text-align: justify;
-        margin: 1rem auto;
+        font-size: 1.2rem;
+        text-align: left;
       }
     }
 
@@ -121,8 +119,8 @@
       font-family: $paragraph-font;
       font-size: 1rem;
       font-weight: 600;
-      padding: 0.3rem;
-      border: 5px solid $yellow;
+      padding: 0.5rem;
+      border: 3px solid white;
       cursor: pointer;
 
       @media screen and (max-width: 440px) {

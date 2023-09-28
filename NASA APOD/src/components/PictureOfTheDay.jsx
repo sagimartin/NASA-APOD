@@ -55,7 +55,10 @@ export default function PictureOfTheDay() {
                     <img src={apodData.url} alt={apodData.title} />
                 )}
                 <div className="explanation">
-                    <h1>{apodData.date} // {apodData.title}</h1>
+                    <div className="title">
+                        <h1>{apodData.title}</h1>
+                        <h1>{apodData.date}</h1>
+                    </div>
                     <p>{apodData.explanation}</p>
                 </div>
             </section>
