@@ -7,6 +7,7 @@ export default function Gallery() {
     const [apodList, setApodList] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState({
+        date: "",
         url: "",
         title: "",
         explanation: "",
@@ -47,8 +48,8 @@ export default function Gallery() {
         fetchRandomApodList();
     }, []);
 
-    const openModal = (url, title, explanation) => {
-        setSelectedImage({ url, title, explanation });
+    const openModal = (date, url, title, explanation) => {
+        setSelectedImage({date, url, title, explanation });
         setShowModal(true);
     };
 
@@ -78,7 +79,7 @@ export default function Gallery() {
                                 src={apodData.url}
                             />
                         )}
-                        <h3 onClick={() => openModal(apodData.url, apodData.title, apodData.explanation)}
+                        <h3 onClick={() => openModal(apodData.date, apodData.url, apodData.title, apodData.explanation)}
                         >{apodData.title}</h3>
                     </div>
                 ))}

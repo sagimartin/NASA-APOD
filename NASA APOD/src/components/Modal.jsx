@@ -22,7 +22,7 @@ export default function Modal({ apodData, onClose }) {
                     />
                 )}
                 <div className="modal-explanation">
-                    <h2>{apodData.title}</h2>
+                    <h2>{apodData.date} // {apodData.title}</h2>
                     <p>{apodData.explanation}</p>
                 </div>
             </div>

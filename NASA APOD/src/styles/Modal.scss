@@ -47,7 +47,8 @@
 
       h2 {
         margin-bottom: 1rem;
-        font-family: $title-font;
+        font-family: $paragraph-font;
+        text-transform: uppercase;
       }
 
       p {
@@ -58,9 +59,10 @@
 
   .modal-close {
     position: absolute;
-    top: 1px;
+    top: -5px;
     right: 10px;
-    font-size: 2rem;
+    font-family: $paragraph-font;
+    font-size: 3rem;
     color: black;
     cursor: pointer;
   }
