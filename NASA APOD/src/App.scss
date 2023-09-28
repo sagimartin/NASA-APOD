@@ -23,6 +23,7 @@ $yellow: #f2d39a;
   margin: 0 auto;
   max-width: 80vw;
   @media screen and (max-width: 440px) {
+    max-width: 100vw;
     margin-bottom: -3rem;
   }
 }
@@ -39,7 +40,7 @@ $yellow: #f2d39a;
   cursor: default;
 
   @media screen and (max-width: 440px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 

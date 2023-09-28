@@ -29,7 +29,7 @@
     img,
     iframe {
       max-height: 50rem;
-      max-width: 95%;
+      max-width: 100%;
       border-radius: 10px;
     }
 
@@ -39,11 +39,14 @@
     }
 
     .modal-explanation {
-      margin: 0 2rem;
       max-width: 60rem;
       text-align: justify;
       overflow: scroll;
       cursor: default;
+
+      @media screen and (max-width: 440px) {
+        margin: 0 0;
+      }
 
       h2 {
         margin-bottom: 1rem;
@@ -59,8 +62,8 @@
 
   .modal-close {
     position: absolute;
-    top: -5px;
-    right: 10px;
+    top: -10px;
+    right: 5px;
     font-family: $paragraph-font;
     font-size: 3rem;
     color: black;
