@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
+import "../styles/Gallery.scss";
+
 export default function Gallery() {
     const [apodList, setApodList] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -12,31 +14,37 @@ export default function Gallery() {
 
     const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
-    // Fetch APOD images from the past 9 days
-    useEffect(() => {
-        const fetchApodList = async () => {
-            const currentDate = new Date();
-            const previousDates = [];
+    const fetchRandomApodList = async () => {
+        const randomDates = [];
+        const currentDate = new Date();
 
-            for (let i = 1; i <= 9; i++) {
-                const date = new Date(currentDate);
-                date.setDate(currentDate.getDate() - i);
-                previousDates.push(date.toISOString().split("T")[0]);
-            }
-
-            const apodDataList = await Promise.all(
-                previousDates.map(async (date) => {
-                    const response = await fetch(
-                        `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`
-                    );
-                    return response.json();
-                })
+        for (let i = 0; i < 6; i++) {
+            const randomDate = new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth(),
+                currentDate.getDate() - Math.floor(Math.random() * 365)
             );
 
-            setApodList(apodDataList);
-        };
+            if (randomDate < currentDate) {
+                const formattedDate = randomDate.toISOString().split("T")[0];
+                randomDates.push(formattedDate);
+            }
+        }
 
-        fetchApodList();
+        const apodDataList = await Promise.all(
+            randomDates.map(async (date) => {
+                const response = await fetch(
+                    `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`
+                );
+                return response.json();
+            })
+        );
+
+        setApodList(apodDataList);
+    };
+
+    useEffect(() => {
+        fetchRandomApodList();
     }, []);
 
     const openModal = (url, title, explanation) => {
@@ -75,6 +83,9 @@ export default function Gallery() {
                     </div>
                 ))}
             </div>
+            <button onClick={fetchRandomApodList}>
+                REFRESH GALLERY
+            </button>
             {showModal && (
                 <Modal
                     apodData={selectedImage}
