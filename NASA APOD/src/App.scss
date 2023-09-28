@@ -16,15 +16,9 @@ $yellow: #f2d39a;
 #root {
   background-image: url("/background.jpg");
   padding: 2rem;
-}
 
-// NAVBAR
-.navBar {
-  margin: 0 auto;
-  max-width: 80vw;
   @media screen and (max-width: 440px) {
-    max-width: 100vw;
-    margin-bottom: -3rem;
+    padding: 0;
   }
 }
 

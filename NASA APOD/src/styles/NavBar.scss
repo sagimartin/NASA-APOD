@@ -1,0 +1,15 @@
+@import "../App.scss";
+
+.navBar {
+  font-family: $menu-font;
+  color: $yellow;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 auto;
+
+  @media screen and (max-width: 440px) {
+    width: 95%;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
