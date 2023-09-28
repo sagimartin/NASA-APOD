@@ -21,8 +21,8 @@ export default function Modal({ apodData, onClose }) {
                         src={apodData.url}
                     />
                 )}
+                <h2>{apodData.date} // {apodData.title}</h2>
                 <div className="modal-explanation">
-                    <h2>{apodData.date} // {apodData.title}</h2>
                     <p>{apodData.explanation}</p>
                 </div>
             </div>

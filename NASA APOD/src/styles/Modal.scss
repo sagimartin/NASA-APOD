@@ -17,7 +17,7 @@
     max-height: 98vh;
     background-color: white;
     padding: 2rem;
-    gap: 3rem;
+    gap: 1rem;
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -38,6 +38,21 @@
       width: 100%;
     }
 
+    h2 {
+      color: white;
+      background-color: black;
+      margin: 0 auto;
+      font-family: $paragraph-font;
+      text-transform: uppercase;
+      width: fit-content;
+      padding: 0.2rem 1rem;
+
+      @media screen and (max-width: 440px) {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+      }
+    }
+
     .modal-explanation {
       max-width: 60rem;
       text-align: justify;
@@ -48,18 +63,9 @@
         margin: 0 0;
       }
 
-      h2 {
-        color: white;
-        background-color: black;
-        margin-bottom: 1rem;
-        font-family: $paragraph-font;
-        text-transform: uppercase;
-        width: fit-content;
-        padding: 0.2rem 1rem;
-      }
-
       p {
         font-family: $paragraph-font;
+        font-size: 1.2rem;
       }
     }
   }
@@ -69,7 +75,7 @@
     top: -10px;
     right: 5px;
     font-family: $paragraph-font;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: black;
     cursor: pointer;
   }
