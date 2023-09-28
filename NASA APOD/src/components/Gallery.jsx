@@ -49,7 +49,7 @@ export default function Gallery() {
     }, []);
 
     const openModal = (date, url, title, explanation) => {
-        setSelectedImage({date, url, title, explanation });
+        setSelectedImage({ date, url, title, explanation });
         setShowModal(true);
     };
 
@@ -62,7 +62,7 @@ export default function Gallery() {
             <div className="divider">GALLERY</div>
             <div className="gallery">
                 {apodList.map((apodData, index) => (
-                    <div className="media-container" key={index}>
+                    <div className="media-container" key={index} onClick={() => openModal(apodData.date, apodData.url, apodData.title, apodData.explanation)}>
                         {apodData.url.includes("youtube.com") ? (
                             // YouTube link? --> video
                             <iframe
@@ -79,8 +79,7 @@ export default function Gallery() {
                                 src={apodData.url}
                             />
                         )}
-                        <h3 onClick={() => openModal(apodData.date, apodData.url, apodData.title, apodData.explanation)}
-                        >{apodData.title}</h3>
+                        <h3>{apodData.title}</h3>
                     </div>
                 ))}
             </div>

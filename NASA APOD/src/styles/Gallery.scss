@@ -38,6 +38,7 @@
       height: 40vh;
       width: auto;
       margin-bottom: 3rem;
+      cursor: pointer;
 
       img,
       iframe {
@@ -53,6 +54,7 @@
       h3 {
         color: white;
         font-family: $paragraph-font;
+        text-transform: uppercase;
         text-align: center;
         width: 100%;
         display: flex;
