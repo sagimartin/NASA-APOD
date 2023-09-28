@@ -49,9 +49,13 @@
       }
 
       h2 {
+        color: white;
+        background-color: black;
         margin-bottom: 1rem;
         font-family: $paragraph-font;
         text-transform: uppercase;
+        width: fit-content;
+        padding: 0.2rem 1rem;
       }
 
       p {
