@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 440px) {
+    margin-top: -8rem;
+  }
+
   @media screen and (max-width: 1024px) {
     max-width: 80vw;
   }
@@ -26,6 +30,7 @@
 
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
 
       img,
       iframe {

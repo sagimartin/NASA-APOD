@@ -9,12 +9,20 @@
   align-items: center;
   cursor: default;
 
+  @media screen and (max-width: 440px) {
+    margin-top: -2rem;
+  }
+
   .main-section {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
     color: white;
-    gap: 3rem;
+    gap: 2rem;
+
+    @media screen and (max-width: 440px) {
+      gap: 1rem;
+    }
 
     img {
       border-radius: 10px;
@@ -22,43 +30,36 @@
       max-width: 80vw;
     }
 
-    .explanation {
-      max-height: 80vh;
+    h1 {
+      color: black;
+      background-color: white;
+      font-family: $paragraph-font;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      width: fit-content;
+      padding: 0 1rem;
+      border: 3px solid white;
 
-      h1 {
-        color: black;
-        background-color: white;
-        font-family: $paragraph-font;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        width: fit-content;
-        padding: 0 1rem;
-        border: 3px solid white;
-      }
-
-      p {
-        margin-top: 2rem;
-        font-family: $paragraph-font;
-        font-size: 1.5rem;
+      @media screen and (max-width: 440px) {
+        font-size: 1rem;
         text-align: justify;
-        line-height: 2rem;
+        margin: 1rem auto;
       }
     }
 
-    @media screen and (max-width: 440px) {
-      .explanation {
+    p {
+      max-height: 80vh;
+      margin-top: 1.5rem;
+      font-family: $paragraph-font;
+      font-size: 1.5rem;
+      text-align: justify;
+      line-height: 2rem;
+
+      @media screen and (max-width: 440px) {
+        margin-top: 1rem;
         max-height: 40vh;
         overflow: scroll;
-
-        h1 {
-          font-size: 1rem;
-          text-align: justify;
-          margin: 0 auto;
-        }
-
-        p {
-          font-size: 1rem;
-        }
+        font-size: 1rem;
       }
     }
 
@@ -111,7 +112,7 @@
 
     @media screen and (max-width: 440px) {
       font-size: 0.7rem;
-      margin-bottom: -5rem;
+      margin-top: 2rem;
     }
 
     input {
