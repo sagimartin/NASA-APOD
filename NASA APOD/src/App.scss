@@ -15,7 +15,7 @@ $yellow: #f2d39a;
 
 #root {
   background-image: url("/background.jpg");
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   @media screen and (max-width: 440px) {
     padding: 0;
