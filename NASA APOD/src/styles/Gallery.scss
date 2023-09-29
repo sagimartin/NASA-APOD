@@ -39,12 +39,16 @@
         max-width: 20rem;
       }
     }
+    .media-container:hover {
+      transform: scale(1.05);
+    }
 
     .media-container {
       height: 40vh;
       width: auto;
       margin-bottom: 3rem;
       cursor: pointer;
+      transition: transform 0.3s;
 
       img,
       iframe {
