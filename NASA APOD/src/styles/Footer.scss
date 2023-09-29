@@ -1,0 +1,41 @@
+@import "../App.scss";
+
+.footer {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .arrow-button {
+    fill: $yellow;
+    width: 8rem;
+
+    @media screen and (max-width: 440px) {
+      width: 4rem;
+    }
+  }
+
+  h3 {
+    color: $yellow;
+    text-transform: uppercase;
+    font-family: $paragraph-font;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: right;
+
+    @media screen and (max-width: 440px) {
+      text-align: center;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.arrow-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
